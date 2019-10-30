@@ -31,6 +31,7 @@ getHomeR = do
             <div>
                 <h1>
                     OLA MUNDO
+            <img src=@{StaticR citeg_png}>
             <button class="btn btn-danger" onclick="ola()">
                 OK
         |]
