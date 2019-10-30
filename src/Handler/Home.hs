@@ -13,7 +13,24 @@ import Database.Persist.Postgresql
 getHomeR :: Handler Html
 getHomeR = do
     defaultLayout $
+        -- remoto
+        -- addScriptRemote "https://code.jquery.com.br"
+        -- esta no projeto
+        addStylesheet (StaticR css_bootstrap_css)
+        toWidgetHead [julius|
+            function ola(){
+                alert("OLA MUNDO")
+            }
+        |]
+        toWidgetHead [lucius|
+            h1 {
+                color: red;
+            }
+        |]
         [whamlet|
-            <h1> 
-                OLA MUNDO
+            <div>
+                <h1>
+                    OLA MUNDO
+            <button class="btn btn-danger" onclick="ola()">
+                OK
         |]
