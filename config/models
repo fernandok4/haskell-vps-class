@@ -1,17 +1,35 @@
-User
-    ident Text
-    password Text Maybe
-    UniqueUser ident
-    deriving Typeable
-Email
-    email Text
-    userId UserId Maybe
-    verkey Text Maybe
-    UniqueEmail email
-Comment json -- Adding "json" causes ToJSON and FromJSON instances to be derived.
-    message Text
-    userId UserId Maybe
-    deriving Eq
+--User
+--    ident Text
+--    password Text Maybe
+--    UniqueUser ident
+--    deriving Typeable
+--Email
+--    email Text
+--    userId UserId Maybe
+--    verkey Text Maybe
+--    UniqueEmail email
+--Comment json -- Adding "json" causes ToJSON and FromJSON instances to be derived.
+--    message Text
+--    userId UserId Maybe
+--    deriving Eq
+--    deriving Show
+
+-- By default this file is used in Model.hs (which is imported by Foundation.hs)
+
+Cards sql=cards
+    idCard Int
+    nmCard Text
+    nmAttribute Text
+    dsUrlCard Text
+    Primary idCard
     deriving Show
 
- -- By default this file is used in Model.hs (which is imported by Foundation.hs)
+CardPrice sql=cards_price
+    idCard CardsId
+    dtReference Int
+    idSite Int
+    vlPrice Double
+    dsUrl Text
+    Primary idCard
+    deriving Show
+

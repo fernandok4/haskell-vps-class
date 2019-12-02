@@ -18,3 +18,18 @@ import Database.Persist.Quasi
 -- http://www.yesodweb.com/book/persistent/
 share [mkPersist sqlSettings, mkMigrate "migrateAll"]
     $(persistFileWith lowerCaseSettings "config/models")
+
+instance ToJSON (Entity Cards) where
+    toJSON (Entity pid p) = object
+        [ 
+            "name"   .= cardsNmCard p,
+            "attribute" .= cardsNmAttribute p,
+            "image" .= cardsDsUrlCard p
+        ]
+
+instance ToJSON (Entity CardPrice) where
+    toJSON (Entity pid p) = object
+        [ 
+            "vl_price"   .= cardPriceVlPrice p,
+            "attribute" .= cardPriceIdSite p
+        ]
