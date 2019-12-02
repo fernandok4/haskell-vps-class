@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            Imagem
+        <div class="col-sm-4">
+            Nome da Carta
+        <div class="col-sm-4">
+            Ações
+    $forall Entity pid card <- cards
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="/static/#{cardsIdCard card}.jpg" style="width: 200px;">
+            <div class="col-sm-4">
+                #{cardsNmCard card}
+            <div class="col-sm-4">
+                <a href="/cards/#{cardsIdCard card}/prices">
+                    Consultar Preços
