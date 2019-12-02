@@ -5,4 +5,5 @@
 
 / HomeR GET
 /cards/#Text SearchCards GET
+/cards Search GET
 /cards/#CardsId/prices Prices GET

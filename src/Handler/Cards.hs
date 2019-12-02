@@ -10,6 +10,9 @@ import Import
 import Text.Julius
 import Database.Persist.Postgresql
 
+getSearch :: Handler Html
+getSearch = getSearchCards ""
+
 getSearchCards :: Text -> Handler Html
 getSearchCards search = do
     cards <- runDB $ selectList [Filter CardsNmCard (Left $ concat ["%", search, "%"]) (BackendSpecificFilter "ILIKE")] []
