@@ -1,5 +1,6 @@
 # haskell-vps-class
 
+```sql
 CREATE TABLE cards (
     id_card SERIAL PRIMARY KEY,
     nm_card VARCHAR,
@@ -16,3 +17,4 @@ CREATE TABLE cards_price (
     CONSTRAINT cards_price_fkey FOREIGN KEY (id_card) REFERENCES cards(id_card),
     CONSTRAINT cards_price_pkey PRIMARY KEY (id_card, dt_reference, id_site)
 );
+```
