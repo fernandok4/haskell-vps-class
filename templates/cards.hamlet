@@ -1,17 +1,32 @@
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4">
-            Imagem
-        <div class="col-sm-4">
-            Nome da Carta
-        <div class="col-sm-4">
-            Ações
-    $forall Entity pid card <- cards
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Yugi Prices
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+          
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <form action="/cards/" method="GET" id="searchId" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Selecione uma carta..." onkeyup="search(this.value)" name="card" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Pesquisar</button>
+
+    <div class="container grid-striped">
         <div class="row">
+            <span>
+        <div class="row font-weight-bold py-2">
+            <div class="col-sm-4">
+                Imagem
+            <div class="col-sm-4">
+                Nome da Carta
+            <div class="col-sm-4">
+                Ações
+
+    $forall Entity pid card <- cards
+        <div class="row py-2">
             <div class="col-sm-4">
                 <img src="/static/#{cardsIdCard card}.jpg" style="width: 200px;">
             <div class="col-sm-4">
                 #{cardsNmCard card}
             <div class="col-sm-4">
                 <a href="/cards/#{cardsIdCard card}/prices">
-                    Consultar Preços
+                    Mais Informações

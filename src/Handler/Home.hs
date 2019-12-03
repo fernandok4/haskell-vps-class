@@ -18,7 +18,7 @@ getHomeR = do
         -- remoto
         -- addScriptRemote "https://code.jquery.com.br"
         -- esta no projeto
-        addStylesheet (StaticR css_bootstrap_css)
+        addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         toWidgetHead $(juliusFile "templates/homepage.julius")
         toWidgetHead $(luciusFile "templates/homepage.lucius")
         $(whamletFile "templates/homepage.hamlet")

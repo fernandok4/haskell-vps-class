@@ -1,5 +1,11 @@
-<form action="./cards/" method="GET" id="searchId" class="text-center form-group">
-    <h1 class="title">
-        Comparador de Preços de Cartas de Yugioh
-    <input type="text" placeholder="Selecione uma carta" class="text-center form-control search-text" onkeyup="search(this.value)" name="card">
-    <input type="submit" value="Pesquisar">
+<body class="bg-secondary">
+    <div class="container bg-dark my-auto" style="border-radius: 6%;">
+        <form action="/cards/" method="GET" id="searchId" class="text-center form-group mb-3">
+            <h1 class="title text-light">
+                Yugi Prices
+            <h3 class="subtitle text-light">
+                Comparador de Preços de Cartas de Yugioh
+            <div class="form-group">
+                <input type="text" placeholder="Selecione uma carta..." class="text-center form-control search-text" onkeyup="search(this.value)" name="card">
+            <div class="form-group">
+                <input type="submit" class="btn btn-outline-light btn-lg" value="Pesquisar">

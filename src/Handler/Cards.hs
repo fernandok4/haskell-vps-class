@@ -17,6 +17,7 @@ getSearchCards :: Text -> Handler Html
 getSearchCards search = do
     cards <- runDB $ selectList [Filter CardsNmCard (Left $ concat ["%", search, "%"]) (BackendSpecificFilter "ILIKE")] []
     defaultLayout $ do 
-        addStylesheet (StaticR css_bootstrap_css)
+        addStylesheetRemote "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        toWidgetHead $(juliusFile "templates/homepage.julius")
         toWidgetHead $(juliusFile "templates/cards.julius")
         $(whamletFile "templates/cards.hamlet")
