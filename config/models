@@ -33,3 +33,11 @@ CardPrice sql=cards_price
     Primary idCard
     deriving Show
 
+Usuario
+    nome Text
+    deriving Show
+
+CardUsuario
+    idUsuario UsuarioId
+    idCard CardsId
+    deriving Show

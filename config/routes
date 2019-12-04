@@ -3,7 +3,13 @@
 /favicon.ico FaviconR GET
 /robots.txt RobotsR GET
 
-/ HomeR GET
+/ Register GET
+/enter Enter POST
+
+/home HomeR GET
 /cards/#Text SearchCards GET
 /cards Search GET
 /cards/#CardsId/prices Prices GET
+
+/cards/#CardsId/add AddCard POST
+
