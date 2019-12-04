@@ -25,7 +25,7 @@ getPrices cardid = do
             <ul>
                 $forall (Entity _ _, Entity _ precos) <- valores
                     <li>
-                        #{cardPriceVlPrice precos}
+                        R$ #{cardPriceVlPrice precos}
             <a href="/">
                 Voltar
         |]
